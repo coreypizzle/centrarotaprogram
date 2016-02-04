@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Centra</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="header">
+		<span class="logo"><%= link_to "Centra Rota Program", root_path %></span>
+		<ul class="navbar">
+		<% if user_signed_in? %>
+			<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+		<% else %>
+			<li><%= link_to "Sign In", new_user_session_path %></li>
+		<% end %>
+		</ul>
+</div>
+
+
+
+<%= yield %>
+<p id="notice"><%= notice %></p>
+  <script>
+  $(function() {
+    $( ".draggable" ).draggable({revert: true, snap: 'inner'});
+    $( ".droppable" ).droppable({
+      drop: function( event, ui ) {
+        var one = $(this).find("span").html();
+        var two = ui.draggable.find("span").html();
+        $(this).find("span").html(two);
+        ui.draggable.find("span").html(one);
+        $(this).find("input").val(two);
+        ui.draggable.find("input").val(one);
+      }
+    });
+  });
+  </script>
+</body>
+</html>

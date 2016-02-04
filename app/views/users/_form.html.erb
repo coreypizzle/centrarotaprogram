@@ -1,0 +1,64 @@
+
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :username %><br>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :sunday %><br>
+      <%= f.text_field :sunday %>
+    </div>
+    <div class="field">
+      <%= f.label :monday %><br>
+      <%= f.text_field :monday %>
+    </div>
+    <div class="field">
+      <%= f.label :tuesday %><br>
+      <%= f.text_field :tuesday %>
+    </div>
+    <div class="field">
+      <%= f.label :wednesday %><br>
+      <%= f.text_field :wednesday %>
+    </div>
+    <div class="field">
+      <%= f.label :thursday %><br>
+      <%= f.text_field :thursday %>
+    </div>
+    <div class="field">
+      <%= f.label :friday %><br>
+      <%= f.text_field :friday %>
+    </div>
+    <div class="field">
+      <%= f.label :saturday %><br>
+      <%= f.text_field :saturday %>
+    </div>
+    <div class="field">
+      <%= f.label :role_id %><br>
+      <%= collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}) %>
+    </div>
+    <!--<div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>-->
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>

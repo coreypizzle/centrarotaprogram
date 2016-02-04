@@ -1,0 +1,199 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Varela Round","Verdana",sans-serif;
+}
+
+.header {
+	width: 84.4vw;
+	background-color: #7f9469;
+	max-height: 100px;
+	height: 100px;
+	color: white;
+	line-height: 100px;
+	padding: 0 7.8% 0 7.8%;
+}
+
+.logo {
+	font-size: 1.7vw;
+}
+
+.sub_header {
+	padding: 0 7.8% 0 7.8%;
+	width: 84.4%;
+	font-size: 1.7vw;
+	height: 90px;
+	line-height: 90px;
+	color: white;
+	background-color: #8fa676;
+}
+
+.button {
+	height: 90px;
+	width: 90px;
+	float: right;
+	text-align: center;
+	line-height: 90px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50%;
+}
+
+.button1 {
+	background-image: url(bin.png);
+	background-color: #85a168;
+}
+
+.button2 {
+	background-image: url(pencil.png);
+	background-color: #768e5c;
+}
+
+.button3 {
+	background-image: url(submit.png);
+	background-color: #6e805b;
+}
+
+.navbar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-size: 1.3vw;
+}
+
+.navbar li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+
+
+
+.day_header {
+	padding: 0 7.8% 0 7.8%;
+	font-size: 1.36vw;
+	background-color: #a0ba84;
+	height: 70px;
+	line-height: 70px;
+	color: white;
+}
+
+.tenmar {
+	padding: 0 0 0 10.5%;
+}
+
+.day_header span {
+	width: 10.57vw!important;
+}
+
+.header a {
+	text-decoration: none;
+	color: white;
+}
+
+.table {
+	width: 85%;
+	margin: 0 auto 0 auto;
+	border-spacing: 0px;
+	border-collapse: separate;
+}
+
+table {
+	width: 100%;
+	margin: 0 auto 0 auto;
+	border-spacing: 0px;
+	border-collapse: separate;
+}
+
+.theadfix {
+	height: 70px;
+	position: relative;
+	z-index: -1;
+	background-color: #a0ba84;
+}
+
+.theadfix table {
+	width: 85%;
+}
+
+thead tr {
+	width: 100vw;
+	margin: 0 auto 0 auto;
+}
+
+thead {
+	background-color: #a0ba84;
+	height: 70px;
+	color: white;
+	text-align: left;
+}
+
+th {
+	width: 10.5%;
+	margin: 0;
+}
+
+.sub {
+	display: none;
+}
+
+.td_username {
+	width: 10.5%;
+}
+
+.tr {
+	height: 70px;
+	font-size: 20px;
+	line-height: 70px;
+}
+
+tr {
+	height: 70px;
+	font-size: 20px;
+}
+
+.td {
+	display: inline-block;
+	width: 10.5%;
+}
+
+#notice {
+	margin: 0;
+	background-color: #a0ba84;
+}
+
+.buttonLink {
+	width: 100%;
+	height: 100%;
+}
+
+.buttonLink a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.username {
+	color: #7f9469;
+}
+
+/*.actions {
+*	display: none!important;
+*}*/

@@ -1,0 +1,116 @@
+<div class="sub_header">
+  << Week Commencing : 13/12/15 >>
+  <div class="button1 button">
+    <div class="buttonLink">
+        
+    </div>
+  </div>
+  <div class="button2 button">
+    <div class="buttonLink">
+        
+    </div>
+  </div>
+  <div class="button3 button">
+  </div>
+</div>
+<div class="theadfix">
+<table>
+  <!--<thead>
+    <tr>
+      <th>USER</th>
+      <th>SUNDAY</th>
+      <th>MONDAY</th>
+      <th>TUESDAY</th>
+      <th>WEDNESDAY</th>
+      <th>THURSDAY</th>
+      <th>FRIDAY</th>
+      <th>SATURDAY</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+</table>-->
+</div>
+<div class="table">
+<table>
+<thead>
+    <tr>
+      <th>USER</th>
+      <th>SUNDAY</th>
+      <th>MONDAY</th>
+      <th>TUESDAY</th>
+      <th>WEDNESDAY</th>
+      <th>THURSDAY</th>
+      <th>FRIDAY</th>
+      <th>SATURDAY</th>
+      <th colspan="3"></th>
+    </tr>
+</thead>
+</table>
+</table>
+<div class="table edit">
+<% @users.each do |user| %>
+<div class="tr">
+  <%= form_for(user, :remote => true) do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    <div class="td td_username username">
+      <%= user.username %>
+    </div>
+    <div class="td">
+
+      <%= f.text_field :sunday %>
+    </div>
+    <div class="td">
+
+      <%= f.text_field :monday %>
+    </div>
+    <div class="td">
+
+      <%= f.text_field :tuesday %>
+    </div>
+    <div class="td">
+
+      <%= f.text_field :wednesday %>
+    </div>
+    <div class="td">
+      
+      <%= f.text_field :thursday %>
+    </div>
+    <div class="td">
+      
+      <%= f.text_field :friday %>
+    </div>
+    <div class="td">
+      
+      <%= f.text_field :saturday %>
+    </div>
+    <div class="actions td">
+      <%= f.submit :class => "sub" %>
+    </div>
+    
+  <% end %>
+  </div>
+<% end %>
+
+</div>
+
+<div class="field">
+  <button id="mastersub">Submit</button>
+</div>
+
+<script type="text/javascript">
+  $("#mastersub").click(function() {
+    $(".sub").click();
+  });
+</script>
+
