@@ -47,7 +47,7 @@
       <%= f.label :role_id %><br>
       <%= collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}) %>
     </div>
-    <!--<div class="field">
+    <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -57,7 +57,7 @@
     <div class="field">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>-->
+    </div>
     <div class="actions">
       <%= f.submit %>
     </div>

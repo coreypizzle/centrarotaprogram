@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>
 
 <h1>Listing Approvals</h1>
 
@@ -24,4 +24,149 @@
 
 <br>
 
-<%= link_to 'New Approval', new_approval_path %>
+<%= link_to 'New Approval', new_approval_path %>-->
+
+  <div class="sub_header">
+    <span>Approvals</span>
+    <div class="button1 button">
+      <div class="buttonLink">
+        <%= link_to "", root_path %>
+      </div>
+    </div>
+    <div class="button2 button">
+      <div class="buttonLink">
+        
+      </div>
+    </div>
+    <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
+    <div class="button3 button">
+      <div class="buttonLink">
+       <%= link_to '', approvals_path %> 
+      </div>
+    </div>
+    <% end %>
+  </div>
+<div class="theadfix">
+<table>
+  <!--<thead>
+    <tr>
+      <th>USER</th>
+      <th>SUNDAY</th>
+      <th>MONDAY</th>
+      <th>TUESDAY</th>
+      <th>WEDNESDAY</th>
+      <th>THURSDAY</th>
+      <th>FRIDAY</th>
+      <th>SATURDAY</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+</table>-->
+</div>
+<div class="table">
+<table>
+<thead>
+    <tr>
+      <th>USER</th>
+      <th>SUNDAY</th>
+      <th>MONDAY</th>
+      <th>TUESDAY</th>
+      <th>WEDNESDAY</th>
+      <th>THURSDAY</th>
+      <th>FRIDAY</th>
+      <th>SATURDAY</th>
+      <th colspan="3"></th>
+    </tr>
+</thead>
+</table>
+</table>
+<div class="table edit">
+<% @users.each do |user| %>
+<div class="tr">
+  <%= form_for(user, :remote => true) do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="td td_username username">
+      <%= user.username %>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+      <span><%= user.sundayap %></span>
+      <%= f.hidden_field :sunday, :value => user.sundayap %>
+      <%= f.hidden_field :sundayap, :value => "" %>
+    </div>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+    <span><%= user.mondayap %></span>
+      <%= f.hidden_field :monday, :value => user.mondayap %>
+      <%= f.hidden_field :mondayap, :value => "" %>
+    </div>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+      <span><%= user.tuesdayap %></span>
+      <%= f.hidden_field :tuesday, :value => user.tuesdayap %>
+      <%= f.hidden_field :tuesdayap, :value => "" %>
+    </div>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+      <span><%= user.wednesdayap %></span>
+      <%= f.hidden_field :wednesday, :value => user.wednesdayap %>
+      <%= f.hidden_field :wednesdayap, :value => "" %>
+    </div>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+      <span><%= user.thursdayap %></span>
+      <%= f.hidden_field :thursday, :value => user.thursdayap %>
+      <%= f.hidden_field :thursdayap, :value => "" %>
+    </div>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+      <span><%= user.fridayap %></span>
+      <%= f.hidden_field :friday, :value => user.fridayap %>
+      <%= f.hidden_field :fridayap, :value => "" %>
+    </div>
+    </div>
+    <div class="td">
+    <div class="draggable droppable">
+      <span><%= user.saturdayap %></span>
+      <%= f.hidden_field :saturday, :value => user.saturdayap %>
+      <%= f.hidden_field :saturdayap, :value => "" %>
+    </div>
+    </div>
+    <div class="actions td">
+      <%= f.submit :class => "sub" %>
+    </div>
+    
+  <% end %>
+  </div>
+<% end %>
+
+</div>
+
+<div class="field">
+  <button id="mastersub">Approve</button>
+</div>
+
+<script type="text/javascript">
+  $("#mastersub").click(function() {
+    $(".sub").click();
+    setTimeout(function(){
+      window.location="/";
+    }, 750);
+  });
+</script>
+

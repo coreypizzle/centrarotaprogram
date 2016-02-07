@@ -5,6 +5,7 @@ class ApprovalsController < ApplicationController
   # GET /approvals.json
   def index
     @approvals = Approval.all
+    @users = User.all.order("created_at DESC")
   end
 
   # GET /approvals/1

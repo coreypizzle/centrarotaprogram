@@ -14,6 +14,9 @@
 		<span class="logo"><%= link_to "Centra Rota Program", root_path %></span>
 		<ul class="navbar">
 		<% if user_signed_in? %>
+			<% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
+				<li><%= link_to "Admin Panel", users_path  %></li>
+			<% end %>
 			<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
 		<% else %>
 			<li><%= link_to "Sign In", new_user_session_path %></li>
@@ -24,7 +27,7 @@
 
 
 <%= yield %>
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
   <script>
   $(function() {
     $( ".draggable" ).draggable({revert: true, snap: 'inner'});

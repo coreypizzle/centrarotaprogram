@@ -1,9 +1,9 @@
 <% @events.each do |event| %>
   <div class="sub_header">
-    << Week Commencing : 13/12/15 >>
-    <div class="button1 button">
+  <span>Current Rota</span>
+      <div class="button1 button">
       <div class="buttonLink">
-        <%= link_to '', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to "", root_path %>
       </div>
     </div>
     <div class="button2 button">
@@ -11,8 +11,13 @@
         <%= link_to '', edit_event_path(event) %>
       </div>
     </div>
+        <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
     <div class="button3 button">
+      <div class="buttonLink">
+       <%= link_to '', approvals_path %> 
+      </div>
     </div>
+    <% end %>
   </div>
 <div class="theadfix">
 <table>
@@ -63,8 +68,8 @@
           
         
       <% end %>
-      <td><%= link_to 'Edit', edit_event_path(event) %></td>
-      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <!--<td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
 
     

@@ -7,7 +7,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.where(:approved => true)
     @users = User.all.order("created_at DESC")
   end
 

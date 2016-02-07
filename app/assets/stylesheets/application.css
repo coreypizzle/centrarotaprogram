@@ -56,7 +56,7 @@ html, body {
 }
 
 .button1 {
-	background-image: url(bin.png);
+	background-image: url(doc.png);
 	background-color: #85a168;
 }
 
@@ -122,6 +122,15 @@ table {
 	border-collapse: separate;
 }
 
+.margsev {
+	padding: 0 7.8% 0 7.8%;
+}
+
+.con {
+	width: 79%;
+	margin: 0 auto 0 auto;
+}
+
 .theadfix {
 	height: 70px;
 	position: relative;
@@ -154,8 +163,21 @@ th {
 	display: none;
 }
 
+#mastersub {
+	margin: 0 0 0 7.8%;
+}
+
+.center {
+	text-align: center;
+}
+
 .td_username {
 	width: 10.5%;
+}
+
+.new_user {
+	width: 150px;
+	margin: 10% auto 0 auto;
 }
 
 .tr {

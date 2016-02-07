@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -107,12 +107,12 @@ class UsersController < ApplicationController
     end
 
     def collect_params
-      params.require(:user).permit(:role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)
+      params.require(:user).permit(:role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :mondayap, :tuesdayap, :wednesdayap, :thursdayap, :fridayap, :saturdayap, :sundayap)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:user_ids, :role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)
+      params.require(:user).permit(:user_ids, :role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :mondayap, :tuesdayap, :wednesdayap, :thursdayap, :fridayap, :saturdayap, :sundayap)
     end
 
 
