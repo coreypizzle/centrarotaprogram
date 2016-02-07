@@ -84,11 +84,7 @@ class UsersController < ApplicationController
     end
   end
 
-  protected
 
-    def needs_password?(user, params)
-      params[:password].present?
-    end
 
   # DELETE /users/1
   # DELETE /users/1.json
@@ -99,6 +95,12 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  protected
+
+    def needs_password?(user, params)
+      params[:password].present?
+    end
 
   private
     # Use callbacks to share common setup or constraints between actions.
