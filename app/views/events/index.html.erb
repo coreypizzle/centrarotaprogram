@@ -41,7 +41,7 @@
 <table>
   <thead>
     <tr>
-      <th>USER</th>
+      <th class="userth">USER</th>
       <th>SUNDAY</th>
       <th>MONDAY</th>
       <th>TUESDAY</th>
@@ -56,7 +56,7 @@
     
       <% @users.each do |user| %>
         <tr>
-          <td class="username"><%= user.username %></td>
+          <td class="username userth"><%= user.username %></td>
           <td><%= user.sunday %></td>
           <td><%= user.monday %></td>
           <td><%= user.tuesday %></td>
