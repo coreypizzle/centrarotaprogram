@@ -6,6 +6,7 @@ class ApprovalsController < ApplicationController
   def index
     @approvals = Approval.all
     @users = User.all.order("created_at DESC")
+    @event = Event.find_by_id(1)
   end
 
   # GET /approvals/1

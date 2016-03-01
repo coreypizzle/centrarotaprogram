@@ -123,6 +123,17 @@ table {
 	table-layout: fixed;
 }
 
+.text_in {
+	display: inline;
+}
+
+.namechange {
+	display: inline;
+}
+
+.edit_event {
+	width: 80vw;
+}
 
 .margsev {
 	padding: 0 7.8% 0 7.8%;
@@ -170,8 +181,26 @@ th {
 .sub {
 	display: none;
 }
+.sub2 {
+	display: none;
+}
+.sub3 {
+	display: none;
+}
+.sub4 {
+	display: none;
+}
 
-#mastersub {
+.mastersub {
+	margin: 0 0 0 7.8%;
+}
+.mastersub2 {
+	margin: 0 0 0 7.8%;
+}
+.mastersub3 {
+	margin: 0 0 0 7.8%;
+}
+.mastersub4 {
 	margin: 0 0 0 7.8%;
 }
 
@@ -197,6 +226,29 @@ th {
 tr {
 	height: 70px;
 	font-size: 19px;
+}
+
+.extraheads_l {
+	background-color: #a0ba84;
+	border: 1px solid white;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	color: white;
+	padding: 15px;
+}
+
+.extraheads {
+	background-color: #a0ba84;
+	color: white;
+	border: 1px solid white;
+}
+
+.extraheads_r {
+	background-color: #a0ba84;
+	border: 1px solid white;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	color: white;
 }
 
 .td {

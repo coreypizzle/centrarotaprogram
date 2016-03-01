@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.where(:approved => true)
-    @users = User.all.order("created_at DESC")
+    @users = User.where.not(:role_id => 2).order("created_at DESC")
   end
 
   # GET /events/1
@@ -82,6 +82,6 @@ class EventsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
 
     def event_params
-      params.require(:event).permit(:name, :user_id)
+      params.require(:event).permit(:name, :user_id, :name02, :name03, :name04)
     end
 end

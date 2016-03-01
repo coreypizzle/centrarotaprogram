@@ -109,12 +109,12 @@ class UsersController < ApplicationController
     end
 
     def collect_params
-      params.require(:user).permit(:role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :mondayap, :tuesdayap, :wednesdayap, :thursdayap, :fridayap, :saturdayap, :sundayap)
+      params.require(:user).permit(:role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :mondayap, :tuesdayap, :wednesdayap, :thursdayap, :fridayap, :saturdayap, :sundayap, :monday02, :tuesday02, :wednesday02, :thursday02, :friday02, :saturday02, :sunday02, :monday03, :tuesday03, :wednesday03, :thursday03, :friday03, :saturday03, :sunday03, :monday04, :tuesday04, :wednesday04, :thursday04, :friday04, :saturday04, :sunday04, :mondayap02, :tuesdayap02, :wednesdayap02, :thursdayap02, :fridayap02, :saturdayap02, :sundayap02, :mondayap03, :tuesdayap03, :wednesdayap03, :thursdayap03, :fridayap03, :saturdayap03, :sundayap03, :mondayap04, :tuesdayap04, :wednesdayap04, :thursdayap04, :fridayap04, :saturdayap04, :sundayap04)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:user_ids, :role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :mondayap, :tuesdayap, :wednesdayap, :thursdayap, :fridayap, :saturdayap, :sundayap)
+      params.require(:user).permit(:user_ids, :role_id, :username, :password, :password_confirmation, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :mondayap, :tuesdayap, :wednesdayap, :thursdayap, :fridayap, :saturdayap, :sundayap, :monday02, :tuesday02, :wednesday02, :thursday02, :friday02, :saturday02, :sunday02, :monday03, :tuesday03, :wednesday03, :thursday03, :friday03, :saturday03, :sunday03, :monday04, :tuesday04, :wednesday04, :thursday04, :friday04, :saturday04, :sunday04, :mondayap02, :tuesdayap02, :wednesdayap02, :thursdayap02, :fridayap02, :saturdayap02, :sundayap02, :mondayap03, :tuesdayap03, :wednesdayap03, :thursdayap03, :fridayap03, :saturdayap03, :sundayap03, :mondayap04, :tuesdayap04, :wednesdayap04, :thursdayap04, :fridayap04, :saturdayap04, :sundayap04)
     end
 
 
