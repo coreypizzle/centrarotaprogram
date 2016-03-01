@@ -76,7 +76,7 @@ class EventsController < ApplicationController
     end
 
     def set_users
-      @users = User.all.order("created_at DESC")
+      @users = User.where.not(:role_id => 2).order("created_at DESC")
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

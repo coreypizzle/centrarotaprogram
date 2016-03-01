@@ -174,7 +174,7 @@ thead {
 th {
 	width: 10.5%;
 	margin: 0;
-	font-size: 17px;
+	font-size: 1.1vw;
 	text-align: center;
 }
 
@@ -219,13 +219,13 @@ th {
 
 .tr {
 	height: 70px;
-	font-size: 20px;
+	font-size: 1.2vw;
 	line-height: 70px;
 }
 
 tr {
 	height: 70px;
-	font-size: 19px;
+	font-size: 1.2vw;
 }
 
 .extraheads_l {
