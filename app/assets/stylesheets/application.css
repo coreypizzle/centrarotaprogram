@@ -171,6 +171,18 @@ thead {
 	text-align: left;
 }
 
+.rotatwo {
+	display: none;
+}
+
+.rotathree {
+	display: none;
+}
+
+.rotafour {
+	display: none;
+}
+
 th {
 	width: 10.5%;
 	margin: 0;
@@ -192,16 +204,16 @@ th {
 }
 
 .mastersub {
-	margin: 0 0 0 7.8%;
+	margin: 0;
 }
 .mastersub2 {
-	margin: 0 0 0 7.8%;
+	margin: 0;
 }
 .mastersub3 {
-	margin: 0 0 0 7.8%;
+	margin: 0;
 }
 .mastersub4 {
-	margin: 0 0 0 7.8%;
+	margin: 0;
 }
 
 .center {
@@ -218,13 +230,18 @@ th {
 }
 
 .tr {
-	height: 70px;
+	height: 55px;
 	font-size: 1.2vw;
-	line-height: 70px;
+	line-height: 55px;
+	border-bottom: 1px solid #7f9469;
+}
+
+.nobord {
+	border: 0;
 }
 
 tr {
-	height: 70px;
+	height: 55px;
 	font-size: 1.2vw;
 }
 
@@ -255,6 +272,7 @@ tr {
 	display: inline-block;
 	width: 10.7%;
 	text-align: center;
+
 }
 
 #notice {
@@ -279,6 +297,18 @@ tr {
 
 td {
 	text-align: center;
+}
+
+/*.tr form {
+	border-bottom: 1px solid #7f9469;
+}*/
+
+.actions {
+	border: 0;
+}
+
+.tdb td {
+	border-bottom: 1px solid #7f9469;
 }
 /*.actions {
 *	display: none!important;

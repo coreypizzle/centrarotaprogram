@@ -1,6 +1,6 @@
 <% @events.each do |event| %>
   <div class="sub_header">
-  <span>Current Rota</span>
+  <span><span>Rota : </span><span class="rbutton1"><< 1 </span><span class="rbutton2">2 </span><span class="rbutton3">3 </span><span class="rbutton4">4 >></span>
       <div class="button1 button">
       <div class="buttonLink">
         <%= link_to "", root_path %>
@@ -39,7 +39,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="rotaone">
             <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
       <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name, :value => event.name, :class => "text_in" %><%= f.submit :class => "namechange" %><% end %></td></tr>
       <% else %>
@@ -47,7 +47,7 @@
       <% end %>
       <% @users.each do |user| %>
         
-        <tr>
+        <tr class="tdb">
           <td class="username userth"><%= user.username %></td>
           <td><%= user.sunday %></td>
           <td><%= user.monday %></td>
@@ -60,13 +60,14 @@
           
         
       <% end %>
-      
+  </tbody>
+  <tbody class="rotatwo">    
       <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
       <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name02, :value => event.name02, :class => "text_in" %><%= f.submit :class => "namechange" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name02 %></td></tr>
       <% end %>
-    <tr>
+    <!--<tr>
       <th class="userth extraheads_l">USER</th>
       <th class="extraheads">SUNDAY</th>
       <th class="extraheads">MONDAY</th>
@@ -76,11 +77,11 @@
       <th class="extraheads">FRIDAY</th>
       <th class="extraheads_r">SATURDAY</th>
       <th colspan="3"></th>
-    </tr>
+    </tr>-->
 
       <% @users.each do |user| %>
         
-        <tr>
+        <tr class="tdb">
           <td class="username userth"><%= user.username %></td>
           <td><%= user.sunday02 %></td>
           <td><%= user.monday02 %></td>
@@ -93,12 +94,14 @@
           
         
       <% end %>
+  </tbody>
+  <tbody class="rotathree">
             <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
       <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name03, :value => event.name03, :class => "text_in" %><%= f.submit :class => "namechange" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name03 %></td></tr>
       <% end %>
-      <tr>
+      <!--<tr>
       <th class="userth extraheads_l">USER</th>
       <th class="extraheads">SUNDAY</th>
       <th class="extraheads">MONDAY</th>
@@ -108,10 +111,10 @@
       <th class="extraheads">FRIDAY</th>
       <th class="extraheads_r">SATURDAY</th>
       <th colspan="3"></th>
-    </tr>
+    </tr>-->
       <% @users.each do |user| %>
         
-        <tr>
+        <tr class="tdb">
           <td class="username userth"><%= user.username %></td>
           <td><%= user.sunday03 %></td>
           <td><%= user.monday03 %></td>
@@ -124,12 +127,14 @@
           
         
       <% end %>
+  </tbody>
+  <tbody class="rotafour">
             <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
       <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name04, :value => event.name04, :class => "text_in" %><%= f.submit :class => "namechange" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name04 %></td></tr>
       <% end %>
-              <tr>
+              <!--<tr>
       <th class="userth extraheads_l">USER</th>
       <th class="extraheads">SUNDAY</th>
       <th class="extraheads">MONDAY</th>
@@ -139,10 +144,10 @@
       <th class="extraheads">FRIDAY</th>
       <th class="extraheads_r">SATURDAY</th>
       <th colspan="3"></th>
-    </tr>
+    </tr>-->
       <% @users.each do |user| %>
         
-        <tr>
+        <tr class="tdb">
           <td class="username userth"><%= user.username %></td>
           <td><%= user.sunday04 %></td>
           <td><%= user.monday04 %></td>
