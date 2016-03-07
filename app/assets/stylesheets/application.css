@@ -144,6 +144,19 @@ table {
 	height: 23px;
 }
 
+.divbutton_style input {
+	font-family: sans-serif;
+	font-size: 13px;
+	color: white!important;
+	background-color: #7f9469;
+	border-radius: 10px;
+	text-decoration: none!important;
+	padding: 3px 8px;
+	border: 0;
+	height: 23px;
+	margin: 5px 0 5px 0;
+}
+
 
 .bot_marg {
 	margin: 0 0 15px 0;
