@@ -129,6 +129,29 @@ table {
 
 .namechange {
 	display: inline;
+	margin: 0 0 0 10px;
+}
+
+.button_style {
+	font-family: sans-serif;
+	font-size: 13px;
+	color: white!important;
+	background-color: #7f9469;
+	border-radius: 10px;
+	text-decoration: none!important;
+	padding: 3px 8px;
+	border: 0;
+	height: 23px;
+}
+
+
+.bot_marg {
+	margin: 0 0 15px 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
 }
 
 .edit_event {
@@ -204,16 +227,16 @@ th {
 }
 
 .mastersub {
-	margin: 0;
+	margin: 5px 0;
 }
 .mastersub2 {
-	margin: 0;
+	margin: 5px 0;
 }
 .mastersub3 {
-	margin: 0;
+	margin: 5px 0;
 }
 .mastersub4 {
-	margin: 0;
+	margin: 5px 0;
 }
 
 .center {
@@ -222,6 +245,10 @@ th {
 
 .td_username {
 	width: 10.5%;
+}
+
+.alert {
+	text-align: center;
 }
 
 .new_user {

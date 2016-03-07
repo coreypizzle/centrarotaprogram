@@ -5,7 +5,7 @@ class ApprovalsController < ApplicationController
   # GET /approvals.json
   def index
     @approvals = Approval.all
-    @users = User.where.not(:role_id => 2).order("created_at DESC")
+    @users = User.where.not(:role_id => 2).order(:order)
     @event = Event.find_by_id(1)
   end
 

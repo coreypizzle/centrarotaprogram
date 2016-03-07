@@ -3,6 +3,7 @@
   <thead>
     <tr>
       <th class="margsev">Name</th>
+      <th>Order</th>
       <th>Role</th>
       <th colspan="3"></th>
     </tr>
@@ -12,15 +13,30 @@
     <% @users.each do |user| %>
       <tr>
         <td class="margsev"><%= user.username %></td>
+        <td><%= form_for(user, :remote => true) do |f| %><%= f.select :order, (0..User.count) %></br><%= f.submit :class => "sub" %><% end %></td>
         <td><%= user.role.name %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), :class => "button_style" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button_style"  %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div class="field margsev bot_marg">
+  <button class="mastersub button_style">Update Order</button>
+</div>
 
-<span class="margsev"><%= link_to 'New User', new_user_path %></span>
+
+<script type="text/javascript">
+  $(".mastersub").click(function() {
+    $(".sub").click();
+    setTimeout(function(){
+      window.location="/admin/users";
+    }, 750);
+  });
+</script>
+<div class="field margsev">
+<span class="button_style"><%= link_to 'New User', new_user_path %></span>
+</div>
 <% end %>

@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.where(:approved => true)
-    @users = User.where.not(:role_id => 2).order("created_at DESC")
+    @users = User.where.not(:role_id => 2).order(:order)
   end
 
   # GET /events/1
@@ -76,7 +76,7 @@ class EventsController < ApplicationController
     end
 
     def set_users
-      @users = User.where.not(:role_id => 2).order("created_at DESC")
+      @users = User.where.not(:role_id => 2).order(:order)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
