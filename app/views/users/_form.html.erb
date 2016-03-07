@@ -15,7 +15,7 @@
       <%= f.label :username %><br>
       <%= f.text_field :username %>
     </div>
-    <div class="field">
+    <!--<div class="field">
       <%= f.label :sunday %><br>
       <%= f.text_field :sunday %>
     </div>
@@ -42,7 +42,7 @@
     <div class="field">
       <%= f.label :saturday %><br>
       <%= f.text_field :saturday %>
-    </div>
+    </div>-->
     <div class="field">
       <%= f.label :role_id %><br>
       <%= collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}, :value => @user.role.name) %>
