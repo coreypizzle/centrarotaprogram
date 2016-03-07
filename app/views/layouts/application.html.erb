@@ -30,7 +30,7 @@
 <!--<p id="notice"><%= notice %></p>-->
   <script>
   $(function() {
-    $( ".draggable" ).draggable({revert: true, snap: 'inner'});
+    $( ".draggable" ).draggable({revert: true, snap: 'inner', scroll: false});
     $( ".droppable" ).droppable({
       drop: function( event, ui ) {
         var one = $(this).find("span").html();
