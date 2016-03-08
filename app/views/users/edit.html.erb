@@ -1,8 +1,9 @@
-<div class="con">
-<h1>Editing User</h1>
+<div class="con" style="text-align: center;">
+<h1 style="margin: 10% 0 0 0;">Editing User</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<span style="text-align: center; margin: 0 auto 0 auto!important;">
+<%= link_to 'Show', @user, :class => "button_style" %> |
+<%= link_to 'Back', users_path, :class => "button_style" %>
+</span>
 </div>
