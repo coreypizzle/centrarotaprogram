@@ -41,7 +41,7 @@
   </thead>
   <tbody class="rotaone">
             <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
-      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name, :value => event.name, :class => "text_in" %><%= f.submit :class => "namechange button_style" %><% end %></td></tr>
+      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name, :value => event.name, :class => "text_in" %><%= f.submit "Update", :class => "namechange button_style" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name %></td></tr>
       <% end %>
@@ -63,7 +63,7 @@
   </tbody>
   <tbody class="rotatwo">    
       <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
-      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name02, :value => event.name02, :class => "text_in" %><%= f.submit :class => "namechange button_style" %><% end %></td></tr>
+      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name02, :value => event.name02, :class => "text_in" %><%= f.submit "Update", :class => "namechange button_style" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name02 %></td></tr>
       <% end %>
@@ -97,7 +97,7 @@
   </tbody>
   <tbody class="rotathree">
             <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
-      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name03, :value => event.name03, :class => "text_in" %><%= f.submit :class => "namechange button_style" %><% end %></td></tr>
+      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name03, :value => event.name03, :class => "text_in" %><%= f.submit "Update", :class => "namechange button_style" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name03 %></td></tr>
       <% end %>
@@ -130,7 +130,7 @@
   </tbody>
   <tbody class="rotafour">
             <% if current_user.role.name == "Admin" or current_user.role.name == "Admin/Employee" %>
-      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name04, :value => event.name04, :class => "text_in " %><%= f.submit :class => "namechange button_style" %><% end %></td></tr>
+      <tr><td class="userth"><%= form_for(event, :remote => true) do |f| %><%= f.text_field :name04, :value => event.name04, :class => "text_in " %><%= f.submit "Update", :class => "namechange button_style" %><% end %></td></tr>
       <% else %>
       <tr><td class="userth"><%= event.name04 %></td></tr>
       <% end %>
